@@ -2,12 +2,62 @@ import org.w3c.dom.ls.LSException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class ExerciseArray {
 
 
-    public static void main(String[] args) {ArrayExercise2();}
+    public static void main(String[] args) {ArrayExercise3();}
 
+        public static void ArrayExercise3(){
+
+        // Se crea el arrayList
+        List<String> soccerPlayers = new ArrayList<>();
+
+            // Se agregan los elementos que se desean
+            soccerPlayers.add("Falcao");
+            soccerPlayers.add("Suarez");
+            soccerPlayers.add("Aguero");
+            soccerPlayers.add("Lewandowski");
+            soccerPlayers.add("Messi");
+            soccerPlayers.add("CR7");
+            soccerPlayers.add("Neymar JR");
+
+            // Se muestra el arreglo y sus elementos
+            System.out.println("Lista de jugadores :" + soccerPlayers);
+
+            // Eliminar los elementos segun el indice utilizando remove
+            soccerPlayers.remove(2);
+
+            /* Se realiza la impresion para verificar que el elemento,
+            segun su indice se elimine correctamente */
+            System.out.println("Se elimino al jugador en la posicion (2): " +soccerPlayers);
+
+            // Forma para remover un elementos de la lista, si no existe regresa false
+            boolean isRemoved = soccerPlayers.remove("Aguero");
+            System.out.println("Se debe retirar (\"Aguero\"): " + soccerPlayers);
+
+            // Eliminar todos los elementos que existen en una coleccion determinada
+            List<String> players = new ArrayList<>();
+            players.add("Falcao");
+            players.add("Suarez");
+            players.add("Lewandowski");
+
+            soccerPlayers.removeAll(players);
+            System.out.println("Despues de removeAll(players): " +soccerPlayers);
+
+            // Remover el elemento que satisfacen el predicado??
+            soccerPlayers.removeIf(s -> s.startsWith("N"));
+
+            // Se imprime los datos en el arreglo despues de eliminar los que empiezan por N
+            System.out.println("Se deben eliminar los elementos que empiecen con \"N\": " + soccerPlayers);
+
+            // Eliminar todos los elementos del ArrayList utilizando clear
+            soccerPlayers.clear();
+
+            // Se imprime el arreglo, el cual debe estar vacio []
+            System.out.println("Despues de limpiar el arreglo: " +soccerPlayers);
+        }
 
         public static void ArrayExercise2(){
 
@@ -16,7 +66,6 @@ public class ExerciseArray {
 
             // Metodo para comprobar si el array esta vacio, llamando el nombre del array y agregando isEmpty
             System.out.println("El elemento debe estar vacio : " + true);
-
 
             // Se agregan elementos al array de la misma forma con add, por lo  tanto el array deja de estar vacio
             carros.add("BMW");
