@@ -99,6 +99,7 @@ public class ExerciseArray {
 
         // Se imprime el array con su nuevo dato ya agregado
         System.out.println(mascotas);
+
     }
 
 }
