@@ -1,5 +1,6 @@
 import org.w3c.dom.ls.LSException;
-
+import java.util.Iterator;
+import java.util.ListIterator;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
@@ -7,7 +8,120 @@ import java.util.function.Predicate;
 public class ExerciseArray {
 
 
-    public static void main(String[] args) {ArrayExercise3();}
+    public static void main(String[] args) {SearchElementsInArrayListExample();}
+
+    // Buscando elementos en una ArrayList
+
+    /* Compruebe si una ArrayList contiene un elemento determinado | contiene ()
+
+    Encuentre el índice de la primera aparición de un elemento en un ArrayList | índice de()
+
+    Encuentre el índice de la última aparición de un elemento en un ArrayList | lastIndexOf () */
+
+        public static void SearchElementsInArrayListExample() {
+            // Se crea un list de String
+            List<String> names = new ArrayList<>();
+
+            // Se agregan elementos al List
+            names.add("Juan");
+            names.add("Andres");
+            names.add("Martha");                                   // DUDAS
+            names.add("Fabiola");
+            names.add("Juliana");
+            names.add("Gustavo");
+            names.add("Mayadelin");
+
+            // Vamos a comprobar si el ArrayList tiene un elemento determinado
+            System.out.println("Does names array contain \"Mayadelin\"? : " + names.contains("Mayadelin"));
+
+            // Vamos a encontrar el indice de la primera aparicion de un elemento en unArrayList
+            System.out.println("\nindexOf \"Fabiola\": " + names.indexOf("Fabiola"));
+            System.out.println("indexOf \"Mark\": " + names.indexOf("Mark"));
+
+            // Vamos a encontrar el indice de la primera aparicion de un elemento en unArrayList
+            System.out.println("\nindexOf \"Andres\": " + names.indexOf("Andres"));
+            System.out.println("indexOf \"Lucia\": " + names.indexOf("Lucia"));
+
+        }
+
+        public static void ArrayListIteratorRemoveExample() {
+        // Se crea un list Interge
+            List<Integer> numbers = new ArrayList<>();
+
+            // Se agregan los elementos deseados
+            numbers.add(13);
+            numbers.add(18);
+            numbers.add(25);                                        // DUDAS
+            numbers.add(40);
+
+            // Se crea el metodo Iterator
+            numbers.removeIf(num -> num % 2 != 0);
+
+            System.out.println(numbers);
+    }
+
+        public static void iteratingArray(){
+
+        /* Iterando sobre una ArrayList
+
+        El siguiente ejemplo muestra cómo iterar sobre una ArrayList usando
+
+        1. Java 8 forEachy expresión lambda.
+        2. iterator().
+        3. iterator()y el método Java 8 forEachRemaining () .
+        4. listIterator().
+        5. Simple para cada bucle.
+        6. para bucle con índice. */
+
+
+        // Se crea el List animes
+        List<String> animes = new ArrayList<>();
+
+        // Se agg los elementos que se desean al arrayList, en esta caso tipo String
+            animes.add("Dragon Ball");
+            animes.add("Naruto");
+            animes.add("Los Simpson");
+            animes.add("Los padrinos magicos");
+
+            // Iterar utilizando Java 8 forEach y lambda
+            System.out.println("=== Iterate using Java 8 forEach and lambda ===");
+            animes.forEach(System.out::println);
+
+            System.out.println("\n=== Iterar usando un iterator() ===");
+            Iterator<String> animeIterator = animes.iterator();
+            while (animeIterator.hasNext()) {
+                String anime = animeIterator.next();
+                System.out.println(anime);
+            }
+
+            // Vamos a iterar utilizando ambos metodos iterator y java 8 forEach
+            System.out.println("\n=== Iterate using an iterator and Java 8 forEachRemaining() method ===");
+            animeIterator = animes.iterator();
+            animeIterator.forEachRemaining(System.out::println);
+
+            // Vamos a iterar utilizando un ListIterator() para que recorra en ambas direcciones
+            System.out.println("\n=== Iterate using a listIterator() to traverse in both directions ===");
+
+            // En este caso se empieza por el final de la lista
+            ListIterator<String> animeListIterator = animes.listIterator(animes.size());
+            while (animeListIterator.hasPrevious()) {
+                String anime = animeListIterator.previous();
+                System.out.println(anime);
+            }
+
+            // Vamos a iterar utilizando bucle for-each
+            System.out.println("\n=== Iterate using simple for-each loop ===");
+            for (String tvAnime: animes) {
+                System.out.println(tvAnime);
+            }
+
+            // Vamos a iterar urilizando el bucle for con el indice
+            System.out.println("\n=== Iterate using for loop with index ===");
+            for (String anime : animes) {
+                System.out.println(anime);
+            }
+
+    }
 
         public static void ArrayExercise3(){
 
@@ -57,6 +171,8 @@ public class ExerciseArray {
 
             // Se imprime el arreglo, el cual debe estar vacio []
             System.out.println("Despues de limpiar el arreglo: " +soccerPlayers);
+
+
         }
 
         public static void ArrayExercise2(){
