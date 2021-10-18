@@ -11,12 +11,18 @@ public class ExerciseArray {
     Dado que ArrayList admite genéricos, puede crear una ArrayList de cualquier tipo. Puede ser de tipos simples como
     Integer, String, Doubleo tipos complejos como un ArrayList de ArrayLists,
     o un ArrayList de HashMaps o un ArrayList de objetos definidos por el usuario.*/
-    private String name;
-    private int age;
+    private final String name;
+    private final int age;
+    private final String color;
+    private final String car;
 
-    public ExerciseArray(String name, int age) {
+
+    public ExerciseArray(String name, int age, String color, String car) {
         this.name = name;
         this.age = age;
+        this.color = color;
+        this.car = car;
+
     }
     public String getName() {
         return name;
@@ -34,19 +40,34 @@ public class ExerciseArray {
 //        this.age = age;
 //    }
 
+    public String getColor() {
+        return color;
+    }
+
+    public String getCar() {
+        return car;
+    }
+
 
     public static void main(String[] args){ArrayListUserDefinedObjectExample();}
 
         public static void ArrayListUserDefinedObjectExample() {
             List<ExerciseArray> users = new ArrayList<>();
-            users.add(new ExerciseArray("Rajeev", 25));
-            users.add(new ExerciseArray("John", 34));
-            users.add(new ExerciseArray("Steve", 29));
+            users.add(new ExerciseArray("Rajeev", 25, "Black", "BMW"));
+            users.add(new ExerciseArray("John", 34, "White", "KIA"));
+            users.add(new ExerciseArray("Steve", 29, "Red", "TOYOTA"));
 
-            users.forEach(exerciseArray -> System.out.println("Name : " + exerciseArray.getName() +
-                    ", Age : " + exerciseArray.getAge()));
-
+            users.forEach(user -> System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() + ", Color : " + user.getColor() + ", Car : " + user.getCar()));
     }
+
+//    List<ExerciseArray> userColor = new ArrayList<>(users);
+//
+//    List<ExerciseArray> nextUserColor = new ArrayList<>();
+//            userColor.add(new ExerciseArray("Juan", 20, "Blue", "PORSCHE"));
+//            userColor.add(new ExerciseArray("Camilo", 40, "Green", "RENAULT"));
+//            userColor.add(new ExerciseArray("Lucia", 23, "Green", "RENAULT"));
+
+
 
     // Buscando elementos en una ArrayList
 
