@@ -7,8 +7,46 @@ import java.util.function.Predicate;
 
 public class ExerciseArray {
 
+    /* ArrayList de objetos definidos por el usuario
+    Dado que ArrayList admite genéricos, puede crear una ArrayList de cualquier tipo. Puede ser de tipos simples como
+    Integer, String, Doubleo tipos complejos como un ArrayList de ArrayLists,
+    o un ArrayList de HashMaps o un ArrayList de objetos definidos por el usuario.*/
+    private String name;
+    private int age;
 
-    public static void main(String[] args) {SearchElementsInArrayListExample();}
+    public ExerciseArray(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    public String getName() {
+        return name;
+    }
+
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+
+    public int getAge() {
+        return age;
+    }
+
+//    public void setAge(int age) {
+//        this.age = age;
+//    }
+
+
+    public static void main(String[] args){ArrayListUserDefinedObjectExample();}
+
+        public static void ArrayListUserDefinedObjectExample() {
+            List<ExerciseArray> users = new ArrayList<>();
+            users.add(new ExerciseArray("Rajeev", 25));
+            users.add(new ExerciseArray("John", 34));
+            users.add(new ExerciseArray("Steve", 29));
+
+            users.forEach(exerciseArray -> System.out.println("Name : " + exerciseArray.getName() +
+                    ", Age : " + exerciseArray.getAge()));
+
+    }
 
     // Buscando elementos en una ArrayList
 
