@@ -1,4 +1,4 @@
-import org.w3c.dom.ls.LSException;
+
 import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.ArrayList;
@@ -11,63 +11,18 @@ public class ExerciseArray {
     Dado que ArrayList admite genéricos, puede crear una ArrayList de cualquier tipo. Puede ser de tipos simples como
     Integer, String, Doubleo tipos complejos como un ArrayList de ArrayLists,
     o un ArrayList de HashMaps o un ArrayList de objetos definidos por el usuario.*/
-    private final String name;
-    private final int age;
-    private final String color;
-    private final String car;
-
-
-    public ExerciseArray(String name, int age, String color, String car) {
-        this.name = name;
-        this.age = age;
-        this.color = color;
-        this.car = car;
-
-    }
-    public String getName() {
-        return name;
-    }
-
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-
-    public int getAge() {
-        return age;
-    }
-
-//    public void setAge(int age) {
-//        this.age = age;
-//    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public String getCar() {
-        return car;
-    }
-
 
     public static void main(String[] args){ArrayListUserDefinedObjectExample();}
 
         public static void ArrayListUserDefinedObjectExample() {
-            List<ExerciseArray> users = new ArrayList<>();
-            users.add(new ExerciseArray("Rajeev", 25, "Black", "BMW"));
-            users.add(new ExerciseArray("John", 34, "White", "KIA"));
-            users.add(new ExerciseArray("Steve", 29, "Red", "TOYOTA"));
+            List<User> users = new ArrayList<>();
+            users.add(new User("Rajeev", 25, "Black", "BMW"));
+            users.add(new User("John", 34, "White", "KIA"));
+            users.add(new User("Steve", 29, "Red", "TOYOTA"));
 
-            users.forEach(user -> System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() + ", Color : " + user.getColor() + ", Car : " + user.getCar()));
+            users.forEach(user -> System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() +
+                    ", Color : " + user.getColor() + ", Car : " + user.getCar()));
     }
-
-//    List<ExerciseArray> userColor = new ArrayList<>(users);
-//
-//    List<ExerciseArray> nextUserColor = new ArrayList<>();
-//            userColor.add(new ExerciseArray("Juan", 20, "Blue", "PORSCHE"));
-//            userColor.add(new ExerciseArray("Camilo", 40, "Green", "RENAULT"));
-//            userColor.add(new ExerciseArray("Lucia", 23, "Green", "RENAULT"));
-
-
 
     // Buscando elementos en una ArrayList
 
