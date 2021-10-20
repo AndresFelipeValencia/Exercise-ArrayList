@@ -3,7 +3,6 @@ import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Predicate;
 
 public class ExerciseArray {
 
@@ -12,9 +11,10 @@ public class ExerciseArray {
     Integer, String, Doubleo tipos complejos como un ArrayList de ArrayLists,
     o un ArrayList de HashMaps o un ArrayList de objetos definidos por el usuario.*/
 
-    public static void main(String[] args){ArrayListUserDefinedObjectExample();}
+    public static void main(String[] args){
+        arrayListUserDefinedObjectExample();}
 
-        public static void ArrayListUserDefinedObjectExample() {
+        public static void arrayListUserDefinedObjectExample() {
             List<User> users = new ArrayList<>();
             users.add(new User("Rajeev", 25, "Black", "BMW"));
             users.add(new User("John", 34, "White", "KIA"));
@@ -22,7 +22,11 @@ public class ExerciseArray {
 
             users.forEach(user -> System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() +
                     ", Color : " + user.getColor() + ", Car : " + user.getCar()));
-    }
+
+
+
+        }
+
 
     // Buscando elementos en una ArrayList
 
@@ -32,7 +36,7 @@ public class ExerciseArray {
 
     Encuentre el índice de la última aparición de un elemento en un ArrayList | lastIndexOf () */
 
-        public static void SearchElementsInArrayListExample() {
+        public static void searchElementsInArrayListExample() {
             // Se crea un list de String
             List<String> names = new ArrayList<>();
 
@@ -58,7 +62,7 @@ public class ExerciseArray {
 
         }
 
-        public static void ArrayListIteratorRemoveExample() {
+        public static void arrayListIteratorRemoveExample() {
         // Se crea un list Interge
             List<Integer> numbers = new ArrayList<>();
 
@@ -137,7 +141,7 @@ public class ExerciseArray {
 
     }
 
-        public static void ArrayExercise3(){
+        public static void arrayExercise3(){
 
         // Se crea el arrayList
         List<String> soccerPlayers = new ArrayList<>();
@@ -189,7 +193,7 @@ public class ExerciseArray {
 
         }
 
-        public static void ArrayExercise2(){
+        public static void arrayExercise2(){
 
             // Se declara un array de tipo String que se llama carros
             List<String> carros = new ArrayList<>();
@@ -228,7 +232,7 @@ public class ExerciseArray {
 
         }
 
-        public static void ArrayExercise1(){
+        public static void arrayExercise1(){
 
         /*  Crear ArrayList a partir de otra coleccion */
             // Se crea el primer Array de tipo Integer
@@ -259,7 +263,7 @@ public class ExerciseArray {
             System.out.println(todosLosNumeros);
         }
 
-        public static void ArrayExercise(){
+        public static void arrayExercise(){
 
         // Se crea un ArrayList de tipo String
         List<String> mascotas = new ArrayList<>();  // El array esta vacio
