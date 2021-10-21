@@ -1,8 +1,5 @@
 
-import java.util.Iterator;
-import java.util.ListIterator;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class ExerciseArray {
 
@@ -11,19 +8,32 @@ public class ExerciseArray {
     Integer, String, Doubleo tipos complejos como un ArrayList de ArrayLists,
     o un ArrayList de HashMaps o un ArrayList de objetos definidos por el usuario.*/
 
-    public static void main(String[] args){
-        arrayListUserDefinedObjectExample();}
+    public static void main(String[] args)
+    {
+        arrayListUserDefinedObjectExample();
 
+    }
         public static void arrayListUserDefinedObjectExample() {
+            List<String> colors = new ArrayList<>();
+            colors.add("Red");
+            colors.add("Black");
+            colors.add("Blue");
+            colors.add("White");
+
+            List<String> cars = new ArrayList<>();
+            cars.add("BMW");
+            cars.add("TOYOTA");
+            cars.add("VW");
+            cars.add("BENZ");
+
             List<User> users = new ArrayList<>();
-            users.add(new User("Rajeev", 25, "Black", "BMW"));
-            users.add(new User("John", 34, "White", "KIA"));
-            users.add(new User("Steve", 29, "Red", "TOYOTA"));
+            users.add(new User("Rajeev", 25, colors, cars));
+            users.add(new User("John", 34, colors, cars));
+            users.add(new User("Steve", 29, colors, cars));
+            users.add(new User("Patric", 18, colors, cars));
 
             users.forEach(user -> System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() +
-                    ", Color : " + user.getColor() + ", Car : " + user.getCar()));
-
-
+                    ", Color : " + user.getColors() + ", Car : " + user.getCars()));
 
         }
 
@@ -235,6 +245,7 @@ public class ExerciseArray {
         public static void arrayExercise1(){
 
         /*  Crear ArrayList a partir de otra coleccion */
+
             // Se crea el primer Array de tipo Integer
             List<Integer> numeros = new ArrayList<>();   // El array esta vacio
 

@@ -2,25 +2,61 @@ import jdk.internal.cmm.SystemResourcePressureImpl;
 import org.w3c.dom.ls.LSException;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class User {
 
-        private final String name;
-        private final int age;
-        private final String color;
-        private final String car;
+    private String name;
+    private Integer age;
+    private List<String> colors;
+    private List<String> cars;
 
 
-    public User(String name, int age, String color, String car) {
+    public User(String name, Integer age, List<String> colors, List<String> cars) {
         this.name = name;
         this.age = age;
-        this.color = color;
-        this.car = car;
+        this.colors = colors;
+        this.cars = cars;
 
     }
 
-    public String getName() {
+    public String getName()
+    {
+        return name;
+    }
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+    public int getAge()
+    {
+        return age;
+    }
+    public void setAge(int age)
+    {
+        this.age = age;
+    }
+    public List<String> getColors()
+    {
+        return colors;
+    }
+    public void setColors(List<String> colors)
+    {
+        this.colors = colors;
+    }
+    public List<String> getCars()
+    {
+        return cars;
+    }
+    public void setCars(List<String> cars)
+    {
+        this.cars = cars;
+    }
+
+}
+
+   /* public String getName() {
         return name;
     }
 
@@ -28,34 +64,10 @@ public class User {
         return age;
     }
 
-    public String getColor() {
-        return color;
+    public String getColors() {
+        return colors;
     }
 
-    public String getCar() {
-        return car;
-    }
-
-    public static void colorUser(){
-        List<String> isColor = new ArrayList<>();
-        isColor.add("Black");
-        isColor.add("White");
-        isColor.add("Yellow");
-        isColor.add("Red");
-
-        List<String> colorCar = new ArrayList<>(isColor);
-
-        List<String> isCar = new ArrayList<>();
-        isCar.add("BMW");
-        isCar.add("BENZ");
-        isCar.add("MAZDA");
-        isCar.add("TOYOTA");
-
-        colorCar.addAll(isCar);
-
-        System.out.println(colorCar);
-
-    }
-
-
-}
+    public String getCars() {
+        return cars;
+    } */
