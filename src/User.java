@@ -27,7 +27,7 @@ public class User {
     }
     public void setName(String name)
     {
-        this.name = name;
+            this.name = name;
     }
     public int getAge()
     {
@@ -56,18 +56,3 @@ public class User {
 
 }
 
-   /* public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public String getColors() {
-        return colors;
-    }
-
-    public String getCars() {
-        return cars;
-    } */
