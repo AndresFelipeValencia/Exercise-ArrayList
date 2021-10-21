@@ -21,10 +21,21 @@ public class ExerciseArray {
             colors.add("White");
 
             List<String> cars = new ArrayList<>();
-            cars.add("BMW");
-            cars.add("TOYOTA");
-            cars.add("VW");
-            cars.add("BENZ");
+            cars.add("Bmw");
+            cars.add("Toyota");
+            cars.add("Vw");
+            cars.add("Benz");
+
+            // Se add new elementos al List cars
+            cars.add(4, "Mclaren");
+            cars.add(5, "Mazda");
+            cars.add(6, "Ferrari");
+            cars.add(7, "Hyundai");
+
+            // Se modifican elementos al List cars segun el indice que se desea
+            cars.set(2, "Ford");
+            cars.set(5, "Honda");
+            cars.set(7, "Mazda");
 
             List<User> users = new ArrayList<>();
             users.add(new User("Rajeev", 25, colors, cars));
@@ -38,9 +49,13 @@ public class ExerciseArray {
         }
 
 
-    // Buscando elementos en una ArrayList
 
-    /* Compruebe si una ArrayList contiene un elemento determinado | contiene ()
+
+
+
+
+    /* Buscando elementos en una ArrayList
+    Compruebe si una ArrayList contiene un elemento determinado | contiene ()
 
     Encuentre el índice de la primera aparición de un elemento en un ArrayList | índice de()
 
