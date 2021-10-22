@@ -21,10 +21,12 @@ public class ExerciseArray {
             colors.add("White");
 
             List<String> cars = new ArrayList<>();
-            cars.add("Bmw");
             cars.add("Toyota");
             cars.add("Vw");
             cars.add("Benz");
+            cars.add("Mclaren");
+
+            /*System.out.println("The initial list of cars is : " +cars + "\n");*/
 
             // Se add new elementos al List cars
             cars.add(4, "Mclaren");
@@ -32,10 +34,7 @@ public class ExerciseArray {
             cars.add(6, "Ferrari");
             cars.add(7, "Hyundai");
 
-            // Se modifican elementos al List cars segun el indice que se desea
-            cars.set(2, "Ford");
-            cars.set(5, "Honda");
-            cars.set(7, "Mazda");
+            /*System.out.println("List of cars with new items added : " +cars + "\n");*/
 
             List<User> users = new ArrayList<>();
             users.add(new User("Rajeev", 25, colors, cars));
@@ -43,8 +42,20 @@ public class ExerciseArray {
             users.add(new User("Steve", 29, colors, cars));
             users.add(new User("Patric", 18, colors, cars));
 
+            // Se modifican elementos al List cars segun el indice que se desea
+            cars.set(2, "Ford");
+            cars.set(5, "Honda");
+            cars.set(7, "Mazda");
+            cars.set(1, "Rolls Royce");
+
+            // Se elimina un elemento de la list mediante el indice
+            cars.remove(2);
+            cars.remove(5);
+
             users.forEach(user -> System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() +
                     ", Color : " + user.getColors() + ", Car : " + user.getCars()));
+
+
 
         }
 
