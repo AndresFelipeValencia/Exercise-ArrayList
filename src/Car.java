@@ -1,15 +1,13 @@
-import java.util.List;
-
 public class Car {
 
     int numDoor;
-    String colors;
-    String brands;
+    String color;
+    String brand;
 
-    public Car(int numDoor, String colors, String brands) {
+    public Car(int numDoor, String color, String brand) {
         this.numDoor = numDoor;
-        this.colors = colors;
-        this.brands = brands;
+        this.color = color;
+        this.brand = brand;
     }
 
     public int getNumDoor(){
@@ -18,17 +16,17 @@ public class Car {
     public void setNumDoor(int numDoor){
         this.numDoor = numDoor;
     }
-    public String getColors(){
-        return colors;
+    public String getColor(){
+        return color;
     }
-    public void setColors(String colors){
-        this.colors = colors;
+    public void setColor(String color){
+        this.color = color;
     }
-    public String getBrands(){
-        return brands;
+    public String getBrand(){
+        return brand;
     }
-    public void setBrand(String brands){
-        this.brands = brands;
+    public void setBrand(String brand){
+        this.brand = brand;
     }
 
 }
