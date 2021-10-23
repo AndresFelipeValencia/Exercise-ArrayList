@@ -10,10 +10,10 @@ public class User {
     private String name;
     private Integer age;
     private List<String> colors;
-    private List<String> cars;
+    private List<Car> cars;
 
 
-    public User(String name, Integer age, List<String> colors, List<String> cars) {
+    public User(String name, Integer age, List<String> colors, List<Car> cars) {
         this.name = name;
         this.age = age;
         this.colors = colors;
@@ -45,11 +45,11 @@ public class User {
     {
         this.colors = colors;
     }
-    public List<String> getCars()
+    public List<Car> getCars()
     {
         return cars;
     }
-    public void setCars(List<String> cars)
+    public void setCars(List<Car> cars)
     {
         this.cars = cars;
     }
