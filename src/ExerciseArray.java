@@ -44,15 +44,20 @@ public class ExerciseArray {
             users.add(new User("Patric", 18, new ArrayList<>(colors), new ArrayList<>(cars)));
 
             System.out.println("Original list :");
-//            users.forEach(user -> System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() +
-//                    ", Color : " + user.getColors() + ", Car : " + user.getCars()));
+            for (User user : users) {
+                System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() + ", Color : "
+                        + user.getColors() + ", Car : " );
+                for (Car car : user.getCars()) {
+                    System.out.println(car.getBrand());
+                }
+            }
 
             System.out.println("\n");
 
             // Modify elements of the cars list, according to the desired index.
             users.get(0).getCars().set(1, new Car(1, "Black", "Rolls Royce"));
-            users.get(2).getCars().set(0, new Car(1, "Black", "Rolls Royce"));
-            users.get(3).getCars().set(3, new Car(1, "Black", "Rolls Royce"));
+            users.get(2).getCars().set(0, new Car(2, "White", "Benz"));
+            users.get(3).getCars().set(3, new Car(4, "Yellow", "FORD"));
 
             // Modify elements of the colors list, according to the desired index.
             users.get(0).getColors().set(2, "Purple");
@@ -68,17 +73,24 @@ public class ExerciseArray {
             users.get(2).getColors().remove(3);
 
             System.out.println("Modified list :");
-//            users.forEach(user -> System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() +
-//                    ", Color : " + user.getColors() + ", Car : " + user.getCars()));
-
+            for (User user : users) {
+                System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() + ", Color : "
+                        + user.getColors() + ", Car : " );
+                for (Car car : user.getCars()) {
+                    System.out.println(car.getBrand());
+                }
+            }
 
     }
 
+    //            users.forEach(user -> System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() +
+//                    ", Color : " + user.getColors() + ", Car : " + user.getCars()));
 
+//            users.forEach(user -> System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() +
+//                    ", Color : " + user.getColors() + ", Car : " + user.getCars()));
 
-
-
-
+    //            users.forEach(user -> System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() +
+//                    ", Color : " + user.getColors() + ", Car : " + user.getCars()));
 
     /* Buscando elementos en una ArrayList
     Compruebe si una ArrayList contiene un elemento determinado | contiene ()
