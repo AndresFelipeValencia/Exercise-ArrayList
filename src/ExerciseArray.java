@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 public class ExerciseArray {
@@ -26,17 +25,17 @@ public class ExerciseArray {
             colors.add(6, "Yellow");
             colors.add(7, "Pink");
 
-            List<String> cars = new ArrayList<>();
-            cars.add("Toyota");
-            cars.add("Vw");
-            cars.add("Benz");
-            cars.add("Mclaren");
+            List<Car> cars = new ArrayList<>();
+            cars.add(new Car(5,"Red","Toyota"));
+            cars.add(new Car(5, "White","Vw"));
+            cars.add(new Car(4, "Black", "Benz"));
+            cars.add(new Car(2, "Pink", "Mclaren"));
 
-            // new items are added to the list of colors
-            cars.add(4, "Mclaren");
-            cars.add(5, "Mazda");
-            cars.add(6, "Ferrari");
-            cars.add(7, "Hyundai");
+            // new items are added to the list of cars
+            cars.add(new Car(4, "Green", "Honda"));
+            cars.add(new Car(4, "Red", "Mazda"));
+            cars.add(new Car(2, "Gray", "Ferrari") );
+            cars.add(new Car(2, "Blue", "Hyundai"));
 
             List<User> users = new ArrayList<>();
             users.add(new User("Rajeev", 25, new ArrayList<>(colors), new ArrayList<>(cars)));
@@ -45,15 +44,15 @@ public class ExerciseArray {
             users.add(new User("Patric", 18, new ArrayList<>(colors), new ArrayList<>(cars)));
 
             System.out.println("Original list :");
-            users.forEach(user -> System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() +
-                    ", Color : " + user.getColors() + ", Car : " + user.getCars()));
+//            users.forEach(user -> System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() +
+//                    ", Color : " + user.getColors() + ", Car : " + user.getCars()));
 
             System.out.println("\n");
 
             // Modify elements of the cars list, according to the desired index.
-            users.get(0).getCars().set(1, "Ford");
-            users.get(2).getCars().set(0, "Rolls Royce");
-            users.get(3).getCars().set(3, "Mazda");
+            users.get(0).getCars().set(1, new Car(1, "Black", "Rolls Royce"));
+            users.get(2).getCars().set(0, new Car(1, "Black", "Rolls Royce"));
+            users.get(3).getCars().set(3, new Car(1, "Black", "Rolls Royce"));
 
             // Modify elements of the colors list, according to the desired index.
             users.get(0).getColors().set(2, "Purple");
@@ -69,11 +68,8 @@ public class ExerciseArray {
             users.get(2).getColors().remove(3);
 
             System.out.println("Modified list :");
-            users.forEach(user -> System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() +
-                    ", Color : " + user.getColors() + ", Car : " + user.getCars()));
-
-
-
+//            users.forEach(user -> System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() +
+//                    ", Color : " + user.getColors() + ", Car : " + user.getCars()));
 
 
     }
