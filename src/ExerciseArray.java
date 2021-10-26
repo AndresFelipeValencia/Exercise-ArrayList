@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class ExerciseArray {
 
@@ -10,7 +11,6 @@ public class ExerciseArray {
     public static void main(String[] args)
     {
         arrayListUserDefinedObjectExample();
-
     }
         public static void arrayListUserDefinedObjectExample() {
             List<String> colors = new ArrayList<>();
@@ -43,16 +43,22 @@ public class ExerciseArray {
             users.add(new User("Steve",  29, new ArrayList<>(colors), new ArrayList<>(cars)));
             users.add(new User("Patric", 18, new ArrayList<>(colors), new ArrayList<>(cars)));
 
-            System.out.println("Original list :");
-//            users.forEach(user -> System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() +
-//                    ", Color : " + user.getColors() + ", Car : " + user.getCars()));
+            System.out.println("Original list : \n");
+            for (User user : users) {
+                StringBuilder userCar = new StringBuilder("Name : " + user.getName() + "\n Age : " + user.getAge()
+                        + "\n Color : " + user.getColors() + "\n Car : ");
+                for (Car car : user.getCars()) {
+                    userCar.append(car.getBrand()).append(".").append(" ");
+                }
+                System.out.println(userCar);
+            }
 
             System.out.println("\n");
 
             // Modify elements of the cars list, according to the desired index.
             users.get(0).getCars().set(1, new Car(1, "Black", "Rolls Royce"));
-            users.get(2).getCars().set(0, new Car(1, "Black", "Rolls Royce"));
-            users.get(3).getCars().set(3, new Car(1, "Black", "Rolls Royce"));
+            users.get(2).getCars().set(0, new Car(2, "White", "Benz"));
+            users.get(3).getCars().set(3, new Car(4, "Yellow", "FORD"));
 
             // Modify elements of the colors list, according to the desired index.
             users.get(0).getColors().set(2, "Purple");
@@ -67,18 +73,16 @@ public class ExerciseArray {
             users.get(3).getColors().remove(1);
             users.get(2).getColors().remove(3);
 
-            System.out.println("Modified list :");
-//            users.forEach(user -> System.out.println("Name : " + user.getName() + ", Age : " + user.getAge() +
-//                    ", Color : " + user.getColors() + ", Car : " + user.getCars()));
-
-
+            System.out.println("Modified list : \n");
+            for (User user : users) {
+                StringBuilder userCar = new StringBuilder("Name : " + user.getName() + "\n Age : " + user.getAge()
+                        + "\n Color : " + user.getColors() + "\n Car : ");
+                for (Car car : user.getCars()) {
+                    userCar.append(car.getBrand()).append(".").append(" ");
+                }
+                System.out.println(userCar);
+            }
     }
-
-
-
-
-
-
 
     /* Buscando elementos en una ArrayList
     Compruebe si una ArrayList contiene un elemento determinado | contiene ()
